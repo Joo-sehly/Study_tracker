@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:task_tracker/todo_list/task_provider.dart';
+
+class ThisWeek extends StatelessWidget {
+  const ThisWeek({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final taskProvider = context.watch<TaskProvider>();
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        double width = constraints.maxWidth;
+
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Icon(
+                Icons.calendar_month_outlined,
+                size: width * (35 / 96),
+                color: Colors.blue,
+              ),
+            ),
+
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "This Week",
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: width * (13 / 96),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                '${taskProvider.getTasksThisWeek()}',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: width * (18 / 96),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
