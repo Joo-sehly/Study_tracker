@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/container_grid/color_of_task.dart';
 import 'package:task_tracker/container_grid/heatmap.dart';
@@ -12,7 +13,7 @@ class GridContainer
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 4,
+        horizontal: 4.w,
       ),
 
       decoration: BoxDecoration(
@@ -24,20 +25,20 @@ class GridContainer
       ),
 
       width: double.infinity,
-      height: 260,
+      height: 280.h,
 
       child: Column(
-        children: [
+        children: [ 
           YearProgress(),
 
           Container(
-            height: 1,
-            width: 250,
+            height: 1.h,
+            width: 250.w,
             color: Colors.white70,
           ),
 
           HeatMap(), //  soon
-          SizedBox(height: 15),
+          SizedBox(height: 15.h),
           ColorOfTask(),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class YearProgress
     extends StatelessWidget {
@@ -11,25 +12,25 @@ class YearProgress
         Padding(
           padding:
               EdgeInsetsGeometry.only(
-                right: 20,
-                top: 50,
+                right: 20.w,
+                top: 50.h,
               ),
         ),
         FittedBox(
           fit: BoxFit.scaleDown,
           child: Icon(
             Icons.calendar_month_outlined,
-            size: 35,
+            size: 35.w,
             color: Colors.green,
           ),
         ),
-        SizedBox(width: 15),
+        SizedBox(width: 15.w),
         FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(
             "Year Progress",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 18.sp,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),  

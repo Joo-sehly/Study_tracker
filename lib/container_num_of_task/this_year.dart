@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tracker/todo_list/task_provider.dart';
 
@@ -7,50 +8,51 @@ class ThisYear extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final taskProvider = context.watch<TaskProvider>();
+    final taskProvider = context
+        .watch<TaskProvider>();
 
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        double width = constraints.maxWidth;
+    // return LayoutBuilder(
+    //   builder: (context, constraints) {
+    //     double width = constraints.maxWidth;
 
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Icon(
-                Icons.local_fire_department,
-                color: Colors.orange,
-                size: width * (35 / 96),
-              ),
-            ),
+    return Column(
+      mainAxisAlignment:
+          MainAxisAlignment.center,
+      children: [
+        // Padding(
+        //   padding: EdgeInsets.only(
+        //     right: 95.w,
+        //     top: 6.h,
+        //   ),
+        // ),
+        Icon(
+          Icons.local_fire_department,
+          color: Colors.orange,
+          size: 35.r,
+        ),
 
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                "This Year",
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: width * (13 / 96),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+        Text(
+         "This Year",
+         style: TextStyle(
+           color: Colors.white70,
+           fontSize: 13.sp,
+           fontWeight:
+               FontWeight.bold,
+         ),
+                  ),
 
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                '${taskProvider.getTasksThisYear()}',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: width * (18 / 96),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
+        Text(
+          '${taskProvider.getTasksThisYear()}',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18.sp,
+            fontWeight:
+                FontWeight.bold,
+          ),
+        ),
+      ],
     );
+    //   },
+    // );
   }
 }

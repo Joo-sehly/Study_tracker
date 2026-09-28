@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/todo_list/add_task_dialog.dart';
@@ -17,7 +18,7 @@ class ContainerTodoList extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.all(15),
       margin: EdgeInsets.symmetric(
-        horizontal: 4,
+        horizontal: 4.w,
       ),
       decoration: BoxDecoration(
         color: AppColors.containercolor,
@@ -31,40 +32,46 @@ class ContainerTodoList extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
-                'Todo List',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight:
-                      FontWeight.bold,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'Todo List',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.sp,
+                    fontWeight:
+                        FontWeight.bold,
+                  ),
                 ),
               ),
 
               Spacer(),
 
-              IconButton(
-                onPressed:
-                    taskProvider.isPastDay()
-                    ? null
-                    : () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AddTaskDialog();
-                          },
-                        );
-                      },
-                icon: Icon(
-                  Icons.add,
-                  color: Colors.white,
-                  size: 30,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: IconButton(
+                  onPressed:
+                      taskProvider.isPastDay()
+                      ? null
+                      : () {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AddTaskDialog();
+                            },
+                          );
+                        },
+                  icon: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 30.w,
+                  ),
                 ),
               ),
             ],
           ),
 
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
 
           ListView.builder(
             shrinkWrap: true,

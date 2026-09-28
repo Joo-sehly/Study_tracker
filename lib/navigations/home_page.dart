@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_tracker/Banner_detils/banners.dart';
 import 'package:task_tracker/container_datetime_today/datetime_for_day.dart';
 import 'package:task_tracker/container_grid/grid_container.dart';
@@ -32,15 +33,15 @@ class HomeContent
       child: Column(
         children: [
           Banners(),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           NumOfTask(),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           GridContainer(),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           DatetimeForDay(),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           ContainerTodoList(),
-          SizedBox(height: 80),
+          SizedBox(height: 80.h),
         ],
       ),
     );

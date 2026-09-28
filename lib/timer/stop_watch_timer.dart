@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StopWatchTimer
     extends StatefulWidget {
@@ -80,64 +81,86 @@ class _StopWatchTimerState
       mainAxisAlignment:
           MainAxisAlignment.center,
       children: [
-        Text(
-          foramatTime(duration),
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 50,
-            fontWeight: FontWeight.bold,
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            foramatTime(duration),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 50.sp,
+              fontWeight:
+                  FontWeight.bold,
+            ),
           ),
         ),
 
-        SizedBox(height: 20),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: SizedBox(height: 20.h),
+        ),
 
         Row(
           mainAxisAlignment:
               MainAxisAlignment.center,
           children: [
-            Container(
-              height: 80,
-              width: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.white,
-                  width: 3,
-                ),
-              ),
-              child: IconButton(
-                onPressed: resetTimer,
-                icon: Icon(
-                  Icons.refresh,
-                  color: Colors.white,
-                  size: 40,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Container(
+                height: 80.h,
+                width: 80.w,
+                decoration:
+                    BoxDecoration(
+                      shape: BoxShape
+                          .circle,
+                      border: Border.all(
+                        color: Colors
+                            .white,
+                        width: 3.w,
+                      ),
+                    ),
+                child: IconButton(
+                  onPressed: resetTimer,
+                  icon: Icon(
+                    Icons.refresh,
+                    color: Colors.white,
+                    size: 40.w,
+                  ),
                 ),
               ),
             ),
-            SizedBox(width: 35),
-
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.green,
-                border: Border.all(
-                  color: Colors
-                      .lightGreenAccent,
-                  width: 3,
-                ),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SizedBox(
+                width: 35.w,
               ),
-              child: IconButton(
-                onPressed:
-                    startStopTimer,
-                icon: Icon(
-                  isRunning
-                      ? Icons.pause
-                      : Icons
-                            .play_arrow,
-                  color: Colors.white,
-                  size: 50,
+            ),
+
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Container(
+                width: 80.w,
+                height: 80.h,
+                decoration: BoxDecoration(
+                  shape:
+                      BoxShape.circle,
+                  color: Colors.green,
+                  border: Border.all(
+                    color: Colors
+                        .lightGreenAccent,
+                    width: 3.w,
+                  ),
+                ),
+                child: IconButton(
+                  onPressed:
+                      startStopTimer,
+                  icon: Icon(
+                    isRunning
+                        ? Icons.pause
+                        : Icons
+                              .play_arrow,
+                    color: Colors.white,
+                    size: 50.w,
+                  ),
                 ),
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_tracker/Banner_detils/banners.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/timer/timer_watch.dart';
@@ -38,29 +39,29 @@ class _StopWatchPageState
               ),
             ),
             width: double.infinity,
-            height: 500,
+            height: 500.h,
             child: Column(
               children: [
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Row(
                   mainAxisAlignment:
                       MainAxisAlignment
                           .start,
                   children: [
-                    SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     Icon(
                       Icons
                           .timer_outlined,
                       color: Colors.green,
-                      size: 45,
+                      size: 45.w,
                     ),
-                    SizedBox(width: 10),
+                    SizedBox(width: 10.w),
                     Text(
                       "Timer",
                       style: TextStyle(
                         color:
                             Colors.white,
-                        fontSize: 25,
+                        fontSize: 25.sp,
                         fontWeight:
                             FontWeight
                                 .bold,
@@ -69,7 +70,7 @@ class _StopWatchPageState
                   ],
                 ),
       
-                SizedBox(height: 80),
+                SizedBox(height: 80.h),
       
                 TimerWatch(),
               ],

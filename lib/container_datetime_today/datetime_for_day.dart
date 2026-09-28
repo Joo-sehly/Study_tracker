@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/todo_list/task_provider.dart';
@@ -12,7 +13,7 @@ class DatetimeForDay extends StatelessWidget {
     
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 4,
+        horizontal: 4.w,
       ),
       decoration: BoxDecoration(
         color: AppColors.containercolor,
@@ -22,49 +23,61 @@ class DatetimeForDay extends StatelessWidget {
         ),
       ),
       width: double.infinity,
-      height: 55,
+      height: 55.h,
       child: Row(
         children: [
           Padding(
             padding: EdgeInsets.all(5),
           ),
 
-          IconButton(
-            onPressed: () {
-              provider.previousDay();
-            },
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white70,
-              size: 20,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: IconButton(
+              onPressed: () {
+                provider.previousDay();
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white70,
+                size: 20.w,
+              ),
             ),
           ),
 
-          Icon(
-            Icons.calendar_month_outlined,
-            color: Colors.green,
-            size: 35,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Icon(
+              Icons.calendar_month_outlined,
+              color: Colors.green,
+              size: 35.w,
+            ),
           ),
 
-          Text(
-            '${provider.selectedDate.day} / ${provider.selectedDate.month} / ${provider.selectedDate.year}',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '${provider.selectedDate.day} / ${provider.selectedDate.month} / ${provider.selectedDate.year}',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18.sp,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
 
           Spacer(),
 
-          IconButton(
-            onPressed: () {
-              provider.nextDay();
-            },
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.white70,
-              size: 20,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: IconButton(
+              onPressed: () {
+                provider.nextDay();
+              },
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.white70,
+                size: 20.w,
+              ),
             ),
           ),
         ],

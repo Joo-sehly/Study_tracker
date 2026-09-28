@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TimerWatch
     extends StatefulWidget {
@@ -259,8 +260,8 @@ class _TimerWatchState
         GestureDetector(
           onTap: startTimer,
           child: Container(
-            width: 80,
-            height: 80,
+            width: 80.w,
+            height: 80.h,
             decoration:
                 const BoxDecoration(
                   shape:
@@ -293,8 +294,8 @@ class _TimerWatchState
     required Function(int) onChanged,
   }) {
     return SizedBox(
-      width: 100,
-      height: 210,
+      width: 100.w,
+      height: 210.h,
       child: Column(
         children: [
           Text(
@@ -380,8 +381,8 @@ class _TimerWatchState
                   ? resumeTimer
                   : pauseTimer,
               child: Container(
-                width: 80,
-                height: 80,
+                width: 80.w,
+                height: 80.h,
                 decoration: BoxDecoration(
                   shape:
                       BoxShape.circle,
@@ -409,8 +410,8 @@ class _TimerWatchState
             GestureDetector(
               onTap: cancelTimer,
               child: Container(
-                width: 80,
-                height: 80,
+                width: 80.w,
+                height: 80.h,
                 decoration:
                     const BoxDecoration(
                       shape: BoxShape
