@@ -21,14 +21,16 @@ class GridContainer
 
         borderRadius:
             BorderRadius.circular(20),
-            border: Border.all(color: AppColors.bordercolor)
+        border: Border.all(
+          color: AppColors.bordercolor,
+        ),
       ),
 
       width: double.infinity,
-      height: 280.h,
+      height: 220.h,
 
       child: Column(
-        children: [ 
+        children: [
           YearProgress(),
 
           Container(
@@ -39,7 +41,7 @@ class GridContainer
 
           HeatMap(), //  soon
           SizedBox(height: 15.h),
-          ColorOfTask(),
+          // ColorOfTask(),
         ],
       ),
     );
