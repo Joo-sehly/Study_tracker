@@ -10,34 +10,35 @@ class ColorOfTask
   Widget build(BuildContext context) {
     return Row(
       spacing: 10.w,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Column(
-        //   mainAxisSize:
-        //       MainAxisSize.min,
-        //   children: [
-        //     Row(
-        //       mainAxisSize:
-        //           MainAxisSize.min,
-        //       children: [
-        //         Icon(
-        //           Icons.square,
-        //           color: AppColors
-        //               .zeroTaskColor,
-        //           size: 18.w,
-        //         ),
-        //         SizedBox(width: 4.w),
-        //         Text(
-        //           "0 Task",
-        //           style: TextStyle(
-        //             color:
-        //                 Colors.white70,
-        //             fontSize: 12.6.sp,
-        //           ),
-        //         ),
-        //       ],
-        //     ),
-        //   ],
-        // ),
+        Column(
+          mainAxisSize:
+              MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisSize:
+                  MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.square,
+                  color: AppColors
+                      .zeroTaskColor,
+                  size: 18.w,
+                ),
+                SizedBox(width: 4.w),
+                Text(
+                  "0 Task",
+                  style: TextStyle(
+                    color:
+                        Colors.white70,
+                    fontSize: 12.6.sp,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
 
         Column(
           mainAxisSize:

@@ -1,6 +1,7 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/navigations/home_page.dart';
 import 'package:task_tracker/navigations/profile.dart';
@@ -38,7 +39,7 @@ class _NavBarState
 
       bottomNavigationBar: SafeArea(
         child: CurvedNavigationBar(
-          height: 50,
+          height: 50.h,
           index: selectedIndex,
           color:
               Color(0xFF032443),

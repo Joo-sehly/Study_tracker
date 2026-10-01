@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:contribution_heatmap/contribution_heatmap.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:task_tracker/colors/color.dart';
 import 'package:task_tracker/todo_list/task_provider.dart';
@@ -59,9 +60,9 @@ class HeatMap extends StatelessWidget {
           ),
           child: ContributionHeatmap(
             entries: entries,
-            cellSize: 12,
-            cellSpacing: 3,
-            cellRadius: 2,
+            cellSize: 12.h,
+            cellSpacing: 3.w,
+            cellRadius: 2.w,
             showMonthLabels: true,
             weekdayLabel:
                 WeekdayLabel.githubLike,

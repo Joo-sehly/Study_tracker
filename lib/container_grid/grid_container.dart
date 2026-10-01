@@ -27,7 +27,7 @@ class GridContainer
       ),
 
       width: double.infinity,
-      height: 220.h,
+      height: 270.h,
 
       child: Column(
         children: [
@@ -39,9 +39,11 @@ class GridContainer
             color: Colors.white70,
           ),
 
-          HeatMap(), //  soon
-          SizedBox(height: 15.h),
-          // ColorOfTask(),
+          HeatMap(), 
+          SizedBox(height: 25.h),
+          
+          FittedBox(fit:BoxFit.scaleDown,
+          child: ColorOfTask()),
         ],
       ),
     );

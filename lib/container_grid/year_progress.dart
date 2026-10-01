@@ -42,25 +42,25 @@ class YearProgress
             //          Soon ---> move between years
           ),
         ),
-        Spacer(),
-        IconButton(
-          onPressed: () {
-            ScaffoldMessenger.of(
-              context,
-            ).showSnackBar(
-              SnackBar(
-                content:
-                    ColorOfTask(),
-                backgroundColor:
-                    AppColors.primary,
-              ),
-            );
-          },
-          icon: Icon(
-            Icons.info_outline,
-            color: Colors.white,
-          ),
-        ),
+        // Spacer(),
+        // IconButton(
+        //   onPressed: () {
+        //     ScaffoldMessenger.of(
+        //       context,
+        //     ).showSnackBar(
+        //       SnackBar(
+        //         content:
+        //             ColorOfTask(),
+        //         backgroundColor:
+        //             AppColors.primary,
+        //       ),
+        //     );
+        //   },
+        //   icon: Icon(
+        //     Icons.info_outline,
+        //     color: Colors.white,
+        //   ),
+        // ),
       ],
     );
   }
