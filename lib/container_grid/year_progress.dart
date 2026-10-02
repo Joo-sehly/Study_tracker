@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task_tracker/colors/color.dart';
-import 'package:task_tracker/container_grid/color_of_task.dart';
 
 class YearProgress
     extends StatelessWidget {
